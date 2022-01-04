@@ -18,6 +18,7 @@ public class biodata {
     private JTextField inptjurusan;
     private JTextField inptalamat;
     private JTextArea hasil;
+    private JButton reset;
 
     public biodata() {
         proses.addActionListener(new ActionListener() {
@@ -41,6 +42,25 @@ public class biodata {
                 inptjurusan.setEnabled(false);
                 inptalamat.setEnabled(false);
 
+
+            }
+        });
+        reset.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                inptnpm.setText(inptnpm.getText());
+                inptnama.setText(inptnama.getText());
+                inptjurusan.setText(inptjurusan.getText());
+                inptalamat.setText(inptalamat.getText());
+
+                //Menampilkan hasil ke textarea
+                hasil.setText("");
+
+                inptnpm.setEnabled(true);
+                inptnama.setEnabled(true);
+                inptjurusan.setEnabled(true);
+                inptalamat.setEnabled(true);
 
             }
         });
